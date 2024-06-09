@@ -1,0 +1,351 @@
+:root {
+  --mainColor: #b1a69b;
+  /*--secounderyColor: #fbdb3c;*/
+  --secounderyColor: #566029;
+  --footerColor: #0c1427;
+}
+
+/*========================== about part starts ==========================*/
+.about-image {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-content h2 {
+  margin-bottom: 30px;
+  font-size: 44px;
+}
+
+.about-content .sub-title {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: var(--secounderyColor);
+}
+
+.about-content p{
+  font-size: 18px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+.about-content h2 span{
+  color: var(--mainColor);
+  padding-bottom: 8px;
+}
+
+.about-content .about-list  h3 {
+  line-height: 1;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.about-content .about-list  p {
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.about-list {
+  margin-top: 30px;
+}
+
+.about-list .items{
+  margin-bottom: 30px;
+}
+
+.about-list .items:last-child{
+  margin-bottom: 0px;
+}
+
+.about-single-content {
+  position: relative;
+  padding-left: 100px;
+}
+
+.about-single-content .icon {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  
+  line-height: 75px;
+  height: 80px;
+  background-color: var(--whiteColor);
+  width: 80px;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+}
+
+.about-single-content .icon2 {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 80px;
+}
+
+about-content .default-btn{
+  margin-top: 25px;
+}
+
+.shape02{
+  background-image: url(../img/svg/line-shape.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: inline-block;
+}
+
+.progress-bar {
+  width: 0;
+  animation: progress 1.5s ease-in-out forwards;
+} 
+
+.progress {
+  display: flex;
+  height: 5px;
+  background-color: #e9ecef;
+}
+
+.progress-section {
+  margin-bottom: 30px;
+}
+
+.progress-section .progress-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.progress-section .progress-title h4{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.progress-section .progress-title .title{
+  font-weight: 500;
+}
+about-content .progress-content{
+  margin-top: 20px;
+}
+
+.progress-section .psc01{
+  background-color: var(--mainColor);
+}
+
+.progress-section .psc02{
+  background-color: var(--secounderyColor);
+}
+
+.progress-section .psc03{
+  background-color: #ffbc1f;
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+} 
+@keyframes show  {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*========================== about part ends ==========================*/
+
+/*========================== slider part + navbar starts ==========================*/
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+header .carousel-inner .item {
+  height: 100vh;
+}
+.navbar-inverse {
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-inverse .navbar-brand {
+  color: #fff;
+  font-size: 40px;
+  padding: 40px 15px;
+  font-weight: 900;
+}
+.nav.navbar-nav.navbar-right {
+  margin: 25px 0;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+  text-transform: uppercase;
+}
+.banner {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.carousel-caption {
+  padding-bottom: 250px;
+  font-family: poppins;
+}
+.carousel-caption h2 {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.carousel-caption h2 span {
+  color: #EDBB00;
+}
+.carousel-caption a {
+  background: #EDBB00;
+  padding: 15px 35px;
+  display: inline-block;
+  margin-top: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 25px;
+}
+.carousel-control.right {
+  background-image: none;
+}
+.carousel-control.left {
+  background-image: none;
+}
+.carousel-indicators .active {
+  background-color: #EDBB00;
+  border-color: #EDBB00;
+}
+/*responsive css*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .carousel-caption {
+    padding-bottom: 350px;
+  }
+  .carousel-caption h2 {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar-inverse .navbar-brand {
+    font-size: 30px;
+    padding: 20px 15px;
+  }
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .carousel-caption {
+    padding-bottom: 120px;
+  }
+  .carousel-caption h2 {
+    font-size: 25px;
+  }
+  .carousel-caption h3 {
+    font-size: 18px;
+  }
+  .carousel-caption a {
+    padding: 10px 25px;
+  }
+}
+
+
+/*========================== slider part + navbar ends ==========================*/
+
+/*========================== Job part ==========================*/
+
+.apply-button{
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  padding: 15px 30px;
+  display: inline-block;
+  margin-top: 15px;
+  border-radius: 25px;
+  text-transform: uppercase;
+}
+
+/*========================== Job part ends ==========================*/
+
+
+
+
+/*========================== footer part ==========================*/
+
+/*========================== footer part ==========================*/
+
+footer {
+  background: #101010;
+  padding: 86px 0;
+}
+
+
+.single-box p {
+  color: #fff;
+  font-size: 18px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.single-box h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+.single-box .card-area i {
+  color: #ffffff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.single-box ul {
+  list-style: none;
+  padding: 0;
+}
+.single-box ul li a {
+  text-decoration: none;
+  color: #d8d4d4;
+  line-height: 2.5;
+  font-weight: 100;
+  font-size: 18px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.single-box h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+#basic-addon2 {
+  background: #fe1e4f;
+  color: #fff;
+}
+.socials i {
+  font-size: 18px;
+  margin-right: 15px;
+}
+@media (max-width: 767px) {
+  .single-box {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .single-box {
+    margin-bottom: 50px;
+  }
+}
+
+/*========================== footer part en ==========================*/
