@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yazhini-Responsive career Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename= 'style.css') }}" >
+   
+       
+
+</head>
+    <body>
+        <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename= 'style.css') }}" >
+        <header>
+            
+            {% include 'navbar.html' %}
+     
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    
+                </ol>
+    
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="banner" style="background-image: url('{{ url_for('static', filename='Images/career-banner.jpeg') }}');"></div>
+    
+    
+                        <div class="carousel-caption">
+                            <h2 class="animated bounceInRight" style="animation-delay: 1s">Build Your <span>Career With Us</span></h2>
+                            <h3 class="animated bounceInLeft" style="animation-delay: 2s">We offer a wide range of services for
+                                your Career.</h3>
+                            <p class="animated bounceInRight" style="animation-delay: 3s"><a href="#">Log-in/Sign-up</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <div class="banner" style="background-image: url('{{ url_for('static', filename='Images/a.png') }}');"></div>
+    
+                        <div class="carousel-caption">
+                            <h2 class="animated slideInDown" style="animation-delay: 1s">We are <span>here to help you</span></h2>
+                            <h3 class="animated fadeInUp" style="animation-delay: 2s">Career portal</h3>
+                            <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Explore us</a></p>
+                        </div>
+                    </div>
+                    
+    
+                </div>
+    
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+    
+    
+        </header>
+
+        <br/> <br/>
+    
+        <center>
+        <div> <h1>Wellcome!</h1> </div>
+        </center>
+    
+        <!--================================================= About Area =====================================-->
+        <div class="about-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-4">
+                        <!--div class="about-image">
+                            <img src="all-img\about.jpg" alt="image">
+                        </div-->
+                    </div>
+                    <!--div class="col-lg-5 col-md-12"-->
+                        <div class="about-content">
+                            <p class="sub-title" >About Yazhinicareer</p>
+                            <h2> We Provide The Best Career Platform <span class="shape02" >For You</span></h2>
+                            <p> Here you can find the best career for you. We provide you the best career platform for you, where you can search for jobs. Welcome to Yazhinicareer, your go-to resource for career growth, job opportunities, and professional development. At Yazhinicareer, we believe that everyone deserves a fulfilling and successful career. We are here to empower you with the knowledge, tools, and connections they need to achieve their professional aspirations.</p>
+    
+    
+                                </div>
+    
+                        </div>
+                    </div>
+                </div>
+        <!-- about part end ----->
+        <!-- =========================================================== Job part ======================================================= -->
+        <br/> <br/>
+        <div class="about-area">
+            <div class="container">
+                <div class="row align-items-center">
+                        <div class="about-content">
+        <center>
+            <div> <h1>Job Openings!</h1> </div>
+        </center>
+
+        <br/> <br/>
+
+                              <h2>You will get the latest job updates here</h2>
+                              <div class="about-content">
+                                <p>
+                                {% for job in jobs %}
+                                  {% include 'jobitem.html' %}
+                                {% endfor %}
+                                </p>
+                              
+                            </div>
+                            <br/> <br/>
+       
+
+                        </div></div></div></div>
+
+        <div>{% include 'footer.html' %}</div>
+        
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
