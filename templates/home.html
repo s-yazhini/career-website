@@ -9,9 +9,7 @@
     <title>Yazhini-Responsive career Homepage</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename= 'style.css') }}" >
-   
-       
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
 
 </head>
     <body>
@@ -31,7 +29,7 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <div class="banner" style="background-image: url('{{ url_for('static', filename='Images/career-banner.jpeg') }}');"></div>
+                        <div class="banner" style="background-image: url('{{ url_for('static', filename='Images/Yazhinicareer-banner.png') }}');"></div>
     
     
                         <div class="carousel-caption">
@@ -43,12 +41,12 @@
                     </div>
                     
                     <div class="item">
-                        <div class="banner" style="background-image: url('{{ url_for('static', filename='Images/a.png') }}');"></div>
+                        <div class="banner" style="background-image: url('{{ url_for('static', filename='Images/Yazhinicareer-banner2.png') }}');"></div>
     
                         <div class="carousel-caption">
                             <h2 class="animated slideInDown" style="animation-delay: 1s">We are <span>here to help you</span></h2>
                             <h3 class="animated fadeInUp" style="animation-delay: 2s">Career portal</h3>
-                            <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Explore us</a></p>
+                            <p class="animated zoomIn" style="animation-delay: 3s"><a href="about">Explore us</a></p>
                         </div>
                     </div>
                     
@@ -71,9 +69,11 @@
 
         <br/> <br/>
     
-        <center>
+        <!--center>
         <div> <h1>Wellcome!</h1> </div>
-        </center>
+    </center-->
+        
+        <br/> <br/>
     
         <!--================================================= About Area =====================================-->
         <div class="about-area">
@@ -92,36 +92,37 @@
     
     
                                 </div>
+                    
     
                         </div>
                     </div>
                 </div>
-        <!-- about part end ----->
+        <!--===================== about part end ====================----->
+        <center>
+            <div class="item">
+                <button type="button" class="btn btn-outline-warning">Explore more</button>  <!--bootstrap 4 feature -->
+                
+            
+            </div>
+        </center>
         <!-- =========================================================== Job part ======================================================= -->
         <br/> <br/>
         <div class="about-area">
             <div class="container">
                 <div class="row align-items-center">
                         <div class="about-content">
-        <center>
-            <div> <h1>Job Openings!</h1> </div>
-        </center>
-
-        <br/> <br/>
-
-                              <h2>You will get the latest job updates here</h2>
-                              <div class="about-content">
+                            <p class='sub-title'> Job Openings</p>
+                            <h2>You will get the <span class="shape02" >latest job </span> updates here</h2>
                                 <p>
                                 {% for job in jobs %}
                                   {% include 'jobitem.html' %}
                                 {% endfor %}
                                 </p>
-                              
-                            </div>
                             <br/> <br/>
-       
-
-                        </div></div></div></div>
+                        </div>
+                </div>
+            </div>
+        </div>
 
         <div>{% include 'footer.html' %}</div>
         
