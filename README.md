@@ -1,4 +1,2 @@
 # career-website
-This is a careers website made with Python, Flask, MySQL, Git, Replit. Deployement is also done.
-
-https://yazhinicareer.onrender.com/
+This is a careers website made with Python, Flask, MySQL, Git, Replit. Deployement is also done. visit https://yazhinicareer.onrender.com/
